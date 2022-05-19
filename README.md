@@ -20,14 +20,14 @@ ______________________________________________________________________
 Installation:
 
 ```bash
-pip install ADRES-REPO
+pip install git+https://github.com/AnetaJas/polyphonic-music-modeling.git
 ```
 
 ## Setup
 
 ```bash
 # Clone repo
-git clone ADRES-REPO
+git clone https://github.com/AnetaJas/polyphonic-music-modeling.git
 
 # Go to repo directory
 cd polyphonic_music_modeling
@@ -47,7 +47,7 @@ pre-commit install
 
 ```bash
 # Clone repo
-git clone ADRES-REPO
+git clone https://github.com/AnetaJas/polyphonic-music-modeling.git
 
 # Go to repo directory
 cd polyphonic_music_modeling
