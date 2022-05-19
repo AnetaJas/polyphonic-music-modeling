@@ -1,41 +1,36 @@
 ______________________________________________________________________
 <div align="center">
 
-# 🤖 AI Awesome Project Template
+# Polyphonic Music Modeling
 
 <p align="center">
-  <a href="https://github.com/wiktorlazarski">👋 Template author</a>
+  <a href="https://github.com/AnetaJas">👋 Aneta Jaśkiewicz</a>
+  <a href="https://github.com/">👋 Arkadiusz Rybski</a>
 </p>
 
 ______________________________________________________________________
 
-You may want to adjust badge links in a README.md file.
-
-[![ci-testing](https://github.com/wiktorlazarski/ai-awesome-project-template/actions/workflows/ci-testing.yml/badge.svg?branch=main&event=push)](https://github.com/wiktorlazarski/ai-awesome-project-template/actions/workflows/ci-testing.yml)
-[![Open In Collab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pytorch/ignite/blob/master/examples/notebooks/FashionMNIST.ipynb)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/wiktorlazarski/ai-awesome-project-template/blob/master/LICENSE)
 
 </div>
 
-## 💎 Installation with `pip`
+## Installation with `pip`
 
-Installation is as simple as running:
+Installation:
 
 ```bash
-pip install git+https://github.com/wiktorlazarski/ai-awesome-project-template.git
+pip install ADRES-REPO
 ```
 
-## ⚙️ Setup
-
-**Before setting up a project,** make sure that the `setup.py` script has all setup parameters adjusted and change an `ai_awesome` directory name to your project name. Also, if you want to use conda environment, you may want to change its name in a `conda_env.yml` file. Then, follow the instruction:
+## Setup
 
 ```bash
 # Clone repo
-git clone https://github.com/wiktorlazarski/ai-awesome-project-template.git
+git clone ADRES-REPO
 
 # Go to repo directory
-cd ai-awesome-project-template
+cd polyphonic_music_modeling
 
 # (Optional) Create virtual environment
 python -m venv venv
@@ -48,27 +43,22 @@ pip install -e .[dev]
 pre-commit install
 ```
 
-## 🐍 Setup with Anaconda or Miniconda
-
-**Before setting up a project,** make sure that the `setup.py` script has all setup parameters adjusted and change an `ai_awesome` directory name to your project name. Additionally, you may want to change a default (_ai_awesome_env_) conda environment name in a `conda_env.yml` file. Then, follow the instruction:
+## Setup with Anaconda or Miniconda
 
 ```bash
 # Clone repo
-git clone https://github.com/wiktorlazarski/ai-awesome-project-template.git
+git clone ADRES-REPO
 
 # Go to repo directory
-cd ai-awesome-project-template
+cd polyphonic_music_modeling
 
 # Create and activate conda environment
 conda env create -f ./conda_env.yml
-conda activate ai_awesome_env
+conda activate polyphonic_music_modeling_env
 
 # (Optional but recommended) Install pre-commit hooks to preserve code format consistency
 pre-commit install
 ```
 
-<div align="center">
-
-### 🤗 Happy coding !
 
 </div>
