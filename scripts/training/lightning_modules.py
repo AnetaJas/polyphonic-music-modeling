@@ -2,7 +2,8 @@ import typing as t
 
 import pytorch_lightning as pl
 import torch
-
+import torch.nn as nn
+from polyphonic_music_modeling.model import LSTM as LSTM
 
 class DataModule(pl.LightningDataModule):
     def __init__(
@@ -56,17 +57,18 @@ class ModelModule(pl.LightningModule):
         self,
         *,
         lr: float,
+        input_dim: int, 
     ):
         super().__init__()
         self.save_hyperparameters()
 
         self.learning_rate = lr
-        self.criterion = None
-        self.neural_net = None
+        self.criterion = nn.CrossEntropyLoss()
+        self.neural_net = LSTM(input_dim=input_dim)
 
     def configure_optimizers(self) -> torch.optim.Optimizer:
         return torch.optim.Adam(self.neural_net.parameters(), lr=self.learning_rate)
-
+    #TODO: implement
     def training_step(
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
     ) -> pl.utilities.types.STEP_OUTPUT:
