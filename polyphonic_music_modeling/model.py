@@ -10,14 +10,14 @@ class NeuralNet(nn.Module):
         return X
     
 class LSTM(nn.Module):
-    def __init__(self, input_dim, lstm_layers=3, embedding_dim=256, hidden_dim=256):
+    def __init__(self, input_dim, lstm_layers=3, embedding_dim=64, hidden_dim=256):
         '''
         Creates network for music generation. Consists of LSTM layers and Linear Layer for multi classfication. 
 
             Parameters:
                     input_dim (int): number of unique notes
                     lstm_layers (int): number of lstm layers, default 3 
-                    embedding_dim (int): param, default 256
+                    embedding_dim (int): param, default 64
                     hidden_dim (int): param, default 256
 
         '''
@@ -34,8 +34,7 @@ class LSTM(nn.Module):
 
     def forward(self, notes : torch.Tensor) -> torch.Tensor:
         embeds = self.embedded_notes(notes)
-        lstm_out, _ = self.lstm(embeds.view(len(notes), 1, -1))
-        notes_space = self.from_hidden_to_notes(lstm_out.view(len(notes), -1))
+        lstm_out, _ = self.lstm(embeds.view(notes.size(-1), 1, -1))
+        notes_space = self.from_hidden_to_notes(lstm_out.view(notes.size(-1), -1))
         notes_scores = F.log_softmax(notes_space, dim=1)
         return notes_scores
-
