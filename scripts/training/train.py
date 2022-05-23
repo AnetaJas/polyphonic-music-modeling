@@ -24,14 +24,13 @@ def main(configs: omegaconf.DictConfig) -> None:
         batch_size=configs.dataset_module.batch_size,
         num_workers=configs.dataset_module.num_workers,
     )
-    dataset_module.setup()
+    #dataset_module.setup()
     
     logger.info("Creating model")
     nn_module = lm.ModelModule(
         lr=configs.nn_module.lr,
-        model= LSTM(input_dim=dataset_module.ret_dim())
+        model= LSTM(input_dim=88) # do korelacji ze zbiore danych 
     )
-    print(dataset_module.ret_dim())
     
     logger.info("Creating trainer")
     nn_trainer = pl.Trainer(

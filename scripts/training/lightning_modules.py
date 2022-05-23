@@ -18,7 +18,7 @@ class DataModule(pl.LightningDataModule):
         self.num_workers = num_workers
 
     def setup(self, stage: t.Optional[str] = None) -> None:
-        self.train_dataset = MusicDataset("train")
+        self.train_dataset = MusicDataset("train") # sprobowac podmienic Modul definiujacy dane 
         self.validation_dataset = MusicDataset("val")
         self.test_dataset = MusicDataset("test")
 

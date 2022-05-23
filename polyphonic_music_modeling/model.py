@@ -27,7 +27,6 @@ class LSTM(nn.Module):
         self.embedded_notes = nn.Embedding(input_dim, embedding_dim)
         # LSTM layers
         self.lstm = nn.LSTM(input_size=embedding_dim, hidden_size=hidden_dim, num_layers=lstm_layers)
-        
         # Linear space from hidden state space to space of notes 
         self.from_hidden_to_notes = nn.Linear(hidden_dim, input_dim)
         
