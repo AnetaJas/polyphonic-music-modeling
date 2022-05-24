@@ -18,13 +18,13 @@ install_requires = [line.strip() for line in open("requirements.txt").readlines(
 with open("README.md", "r", encoding="UTF-8") as fh:
     long_description = fh.read()
 
-__version__ = runpy.run_path("polyphonic-music-modeling/_version.py")["__version__"]
+__version__ = runpy.run_path("polyphonic_music_modeling/_version.py")["__version__"]
 
 # Setup package
 setuptools.setup(
-    name="Replace with project name",
+    name="polyphonic-music-modeling",
     version=__version__,
-    author="Replace with your name",
+    author="Aneta Jaskiewicz \n Arkadiusz Rybki",
     author_email="Replace with your email",
     description="Give short description of your project.",
     long_description=long_description,
