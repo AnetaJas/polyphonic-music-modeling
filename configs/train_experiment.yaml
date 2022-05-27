@@ -6,6 +6,7 @@ hydra:
 dataset_module:
   batch_size: 1
   num_workers: 2
+  dataset_root: "/home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling/data/dataset"
 
 nn_module:
   lr: 0.0001
