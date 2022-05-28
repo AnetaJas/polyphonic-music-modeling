@@ -19,11 +19,10 @@ class DataModule(pl.LightningDataModule):
         super().__init__()
         self.batch_size = batch_size
         self.num_workers = num_workers
+        self.dataset_root = dataset_root
 
     def setup(self, stage: t.Optional[str] = None) -> None:
-        # self.train_dataset = MusicDataset("train") # sprobowac podmienic Modul definiujacy dane
-        # self.validation_dataset = MusicDataset("val")
-        # self.test_dataset = MusicDataset("test")
+
 
         self.train_dataset = MusicDataset(
             dataset_root=os.path.join(self.dataset_root, "train")
@@ -77,7 +76,7 @@ class ModelModule(pl.LightningModule):
         self.save_hyperparameters()
 
         self.learning_rate = lr
-        self.criterion = nn.NLLLoss()  # F.cross_entropy does not work
+        self.criterion = nn.NLLLoss()  
         self.neural_net = model
 
     def configure_optimizers(self) -> torch.optim.Optimizer:
@@ -87,6 +86,10 @@ class ModelModule(pl.LightningModule):
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
     ) -> pl.utilities.types.STEP_OUTPUT:
         return self._step(batch=batch)
+    
+    def training_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
+        self._summarize_epoch(
+            log_prefix="train", outputs=outputs)
 
     def validation_step(
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
@@ -104,4 +107,8 @@ class ModelModule(pl.LightningModule):
         x, y = batch
         y_pred = self.neural_net(x)
         loss = self.criterion(y_pred, y[:][0])
-        return loss
+        return {"loss": loss}
+    
+    def _summarize_epoch(self, log_prefix: str, outputs: pl.utilities.types.EPOCH_OUTPUT):
+        mean_loss = torch.tensor([out["loss"] for out in outputs]).mean()
+        self.log(f"{log_prefix}_loss", mean_loss, on_epoch=True)

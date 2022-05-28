@@ -6,3 +6,4 @@ pytorch-lightning
 seaborn
 torch
 torchvision
+wandb

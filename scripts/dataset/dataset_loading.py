@@ -1,8 +1,9 @@
+import io
 import os
 import pathlib as p
-import typing as t
 from collections import Counter
 
+import numpy as np
 import torch
 from torch.utils.data import Dataset
 
@@ -25,9 +26,11 @@ class MusicDataset(Dataset):
         self.index_to_char = {
             index: char for index, char in enumerate(self.uniq_chars)
         }  # encoding
-        self.char_indexes = [self.char_to_index[w] for w in self.notes]
-
-        # self.test_param = 0
+        self.char_indexes = []
+        for note in self.notes:
+            self.char_indexes.append([self.char_to_index[w] for w in note])
+        # self.char_indexes =  [self.char_to_index[w] for note in self.notes for w in note]
+        # self.char_indexes = [self.char_to_index[w] for w in [for note in self.notes]]
 
     def load_notes(self):
         """
@@ -37,32 +40,52 @@ class MusicDataset(Dataset):
             2. Batch - czy myslimy jakos w ten sposob by uczyc go jednorazowo na batchu dowolnej dlugosci, czy bardziej ze dla jednego X: dajemy uczenie i potem dla kolejnego itd...'
         Na razie opcja brute force - wczytuje plik i jade z nim po kolei.
         """
-        text = "".join(
+        self.text = "".join(
             [
                 open(os.path.join(self.root, "preprocessed", file)).read()
                 for file in os.listdir(p.Path(self.root, "preprocessed"))
             ]
         )
 
-        return text
+        self.text_array = []
+
+        text = io.StringIO(self.text)
+        lines = text.readlines()
+
+        index = 0
+        max_index = len(lines)
+        connected_track = ""
+
+        while index < max_index:
+            track = []
+            if lines[index] == "\n":
+                index += 1
+            else:
+                while lines[index] != "\n":
+                    track.append(lines[index][:-1])
+                    index += 1
+                connected_track = "".join(track)
+                self.text_array.append(connected_track)
+
+        return self.text_array
 
     def get_uniq_char(self):
-        char_count = Counter(self.notes)
+        char_count = Counter(self.text)
         return sorted(char_count, key=char_count.get, reverse=True)
 
     def __len__(self):
-        return len(self.char_indexes) - SEQ_LENGTH
+        return len(self.char_indexes)
 
     def __getitem__(self, index):
         return (
-            torch.tensor(self.char_indexes[index : index + SEQ_LENGTH]),  # X
-            torch.tensor(self.char_indexes[index + 1 : index + SEQ_LENGTH + 1]),  # Y
+            torch.tensor((self.char_indexes[index])[:-1]),  # X
+            torch.tensor((self.char_indexes[index])[1:]),  # Y
         )
 
     def get_encoded_item(self, index):
         return [
-            self.notes[index : index + SEQ_LENGTH],  # X
-            self.notes[index + 1 : index + SEQ_LENGTH + 1],
+            (self.notes[index])[:-1],  # X
+            (self.notes[index])[1:],
         ]  # Y
 
     def ret_dimension(self):
