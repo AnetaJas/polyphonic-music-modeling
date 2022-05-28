@@ -5,11 +5,14 @@ hydra:
 
 dataset_module:
   batch_size: 1
-  num_workers: 2
-  dataset_root: "/home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling/data/dataset"
+  num_workers: 4
+  dataset_root: "/home/arybs/ZZSN/polyphonic-music-modeling/data/dataset"
 
 nn_module:
   lr: 0.0001
 
 training:
-  max_epochs: 1
+  max_epochs: 50
+  wandb_project: "MusicModelling"
+  with_gpu: false
+  wandb_name: "TrainLSTM"
