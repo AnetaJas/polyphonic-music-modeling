@@ -31,9 +31,9 @@ def parse_args() -> argparse.Namespace:
 def create_dataset_structure(root_path: Path) -> None:
     logging.info(f"Creating folders structure in {root_path}...")
 
-    train_path = root_path / "train"
-    val_path = root_path / "val"
-    test_path = root_path / "test"
+    train_path = root_path / "train" / "raw"
+    val_path = root_path / "val" / "raw"
+    test_path = root_path / "test" / "raw"
 
     for path in [train_path, val_path, test_path]:
         path.mkdir(parents=True, exist_ok=False)
@@ -51,9 +51,9 @@ def split_dataset(
             path, file, train_frac, val_frac
         )
         raw_file = open(path / "ABC_cleaned" / file.name, "r")
-        out_file_train = open(out_path / "train" / file.name, "w")
-        out_file_val = open(out_path / "val" / file.name, "w")
-        out_file_test = open(out_path / "test" / file.name, "w")
+        out_file_train = open(out_path / "train" / "raw" / file.name, "w")
+        out_file_val = open(out_path / "val" / "raw" / file.name, "w")
+        out_file_test = open(out_path / "test" / "raw" / file.name, "w")
 
         lines = raw_file.readlines()
         index = 0
@@ -132,7 +132,7 @@ def copy_files(path: Path, output_dset_root: Path) -> None:
         "test",
     ]:
         for file in abc_files:
-            shutil.copy(file, output_dset_root / name_dataset / file.name)
+            shutil.copy(file, output_dset_root / name_dataset / "raw" / file.name)
 
 
 def main() -> None:

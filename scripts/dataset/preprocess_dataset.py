@@ -30,13 +30,13 @@ def create_dataset(root_path: Path) -> None:
 
 def preprocess_dataset(path: Path) -> None:
 
-    train_path = path / "train"
-    val_path = path / "val"
-    test_path = path / "test"
+    train_dir = path / "train"
+    val_dir = path / "val"
+    test_dir = path / "test"
 
-    for path in [train_path, val_path, test_path]:
-        for file in list(path.glob("*.abc")):
-            raw_file = open(path / file.name, "r")
+    for path in [train_dir, val_dir, test_dir]:
+        for file in list((path / "raw").glob("*.abc")):
+            raw_file = open(path / "raw" / file.name, "r")
             preprocessed_file = open(path / "preprocessed" / file.name, "w")
             for line in raw_file:
                 if len(line) > 1:

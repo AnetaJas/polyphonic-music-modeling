@@ -39,8 +39,8 @@ class MusicDataset(Dataset):
         """
         text = "".join(
             [
-                open(os.path.join(self.root, file)).read()
-                for file in os.listdir(p.Path(self.root))
+                open(os.path.join(self.root, "preprocessed", file)).read()
+                for file in os.listdir(p.Path(self.root, "preprocessed"))
             ]
         )
 
