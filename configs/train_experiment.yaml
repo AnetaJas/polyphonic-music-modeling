@@ -16,3 +16,10 @@ training:
   wandb_project: "MusicModelling"
   with_gpu: false
   wandb_name: "TrainLSTM"
+  early_stop:
+    monitor: "val_loss"
+    patience: 5
+    mode: "min"
+
+test:
+  path: /home/arybs/ZZSN/polyphonic-music-modeling/train_experiment/2022-05-23/01-06/lightning_logs/version_0/checkpoints/ # do udoskonalenia

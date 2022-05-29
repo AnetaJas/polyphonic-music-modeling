@@ -36,6 +36,20 @@ def main(configs: omegaconf.DictConfig) -> None:
         model= LSTM(input_dim=88) # do korelacji ze zbiore danych 
     )
     
+    logger.info("📲 Initializing callbacks.")
+
+
+    model_ckpt_callback = pl.callbacks.model_checkpoint.ModelCheckpoint(
+        monitor=configs.training.early_stop.monitor,
+        mode=configs.training.early_stop.mode,
+        # fmt: off
+        filename=configs.training.wandb_name + "-{epoch}-{" + configs.training.early_stop.monitor + ":.4f}",
+        # fmt: on
+        save_top_k=3,
+        dirpath="./models",
+        save_last=True,
+    )
+    
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     wandblogger = WandbLogger(
         project=configs.training.wandb_project,
@@ -48,10 +62,16 @@ def main(configs: omegaconf.DictConfig) -> None:
         max_epochs=configs.training.max_epochs,
         logger=wandblogger,
         gpus=1 if configs.training.with_gpu else 0,
+        callbacks=[model_ckpt_callback],
+        log_every_n_steps=1
     )
 
 
     nn_trainer.fit(nn_module, dataset_module)
+    
+    logger.info(f"🥇 Best model: {model_ckpt_callback.best_model_path}")
+    
+    nn_module.load_from_checkpoint(model_ckpt_callback.best_model_path)
     
     nn_trainer.test(nn_module, dataset_module)
     

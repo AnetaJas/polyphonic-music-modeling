@@ -96,6 +96,15 @@ class ModelModule(pl.LightningModule):
     ) -> pl.utilities.types.STEP_OUTPUT:
         return self._step(batch=batch)
 
+    def validation_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
+        self._summarize_epoch(
+            log_prefix="val", outputs=outputs)
+        pass
+
+    def test_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
+        self._summarize_epoch(
+            log_prefix="test", outputs=outputs)
+    
     def test_step(
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
     ) -> pl.utilities.types.STEP_OUTPUT:
