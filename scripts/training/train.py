@@ -8,7 +8,7 @@ import hydra
 import omegaconf
 import pytorch_lightning as pl
 
-# sys.path.append(os.getcwd())
+sys.path.append(os.getcwd())
 
 from loguru import logger
 from pytorch_lightning.loggers import WandbLogger
