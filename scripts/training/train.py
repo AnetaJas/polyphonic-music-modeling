@@ -1,5 +1,5 @@
+from aifc import Error
 import datetime
-import logging
 import os
 import sys
 import warnings
@@ -17,6 +17,7 @@ from pytorch_lightning.loggers import WandbLogger
 import scripts.dataset.dataset_loading as ds
 import scripts.training.lightning_modules as lm
 from polyphonic_music_modeling.model import LSTM as LSTM
+from polyphonic_music_modeling.model import GRU as GRU
 from pytorch_lightning.loggers import WandbLogger
 
 
@@ -26,6 +27,11 @@ from pytorch_lightning.loggers import WandbLogger
 )
 @logger.catch
 def main(configs: omegaconf.DictConfig) -> None:
+    model_to_choose ={
+    "LSTM": LSTM(input_dim=88, lstm_layers=configs.training.model.layers, embedding_dim=configs.training.model.embedding_dim, hidden_dim=configs.training.model.hidden_dim),
+    "GRU": GRU(input_dim=88, gru_layers=configs.training.model.layers, embedding_dim=configs.training.model.embedding_dim, hidden_dim=configs.training.model.hidden_dim),
+    "R-Transfomfer": Error
+}
     logger.add("training.log")
     logger.info("Creating dataset")
 
@@ -34,12 +40,11 @@ def main(configs: omegaconf.DictConfig) -> None:
         num_workers=configs.dataset_module.num_workers,
         dataset_root=configs.dataset_module.dataset_root
     )
-    # dataset_module.setup()
 
     logger.info("Creating model")
     nn_module = lm.ModelModule(
         lr=configs.nn_module.lr,
-        model=LSTM(input_dim=88),  # do korelacji ze zbiore danych
+        model= model_to_choose[configs.training.model_name] # do korelacji ze zbiore danych
     )
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
@@ -55,9 +60,7 @@ def main(configs: omegaconf.DictConfig) -> None:
     model_ckpt_callback = pl.callbacks.model_checkpoint.ModelCheckpoint(
         monitor=configs.training.early_stop.monitor,
         mode=configs.training.early_stop.mode,
-        # fmt: off
         filename=configs.training.wandb_name + "-{epoch}-{" + configs.training.early_stop.monitor + ":.4f}",
-        # fmt: on
         save_top_k=3,
         dirpath="./models",
         save_last=True,
