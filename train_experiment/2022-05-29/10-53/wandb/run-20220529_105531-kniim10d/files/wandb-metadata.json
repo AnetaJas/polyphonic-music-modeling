@@ -1,0 +1,21 @@
+{
+    "os": "Linux-5.4.0-113-generic-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.7.5",
+    "heartbeatAt": "2022-05-29T08:55:32.843340",
+    "startedAt": "2022-05-29T08:55:31.881012",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "./scripts/training/train.py",
+    "git": {
+        "remote": "https://github.com/AnetaJas/polyphonic-music-modeling.git",
+        "commit": "6bbd7374b290c56a3efc572a4d3e6e4c443d27eb"
+    },
+    "email": "jas.aneta@wp.pl",
+    "root": "/home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling",
+    "host": "aneta-Lenovo",
+    "username": "aneta",
+    "executable": "/home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling/venv/bin/python3.7"
+}
