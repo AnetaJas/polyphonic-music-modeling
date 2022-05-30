@@ -85,8 +85,8 @@ class MusicDataset(Dataset):
     def get_encoded_item(self, index):
         return [
             (self.notes[index])[:-1],  # X
-            (self.notes[index])[1:],
-        ]  # Y
+            (self.notes[index])[1:],  # Y
+        ]
 
     def ret_dimension(self):
         return len(self.uniq_chars)
