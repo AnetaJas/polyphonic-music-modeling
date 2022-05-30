@@ -99,7 +99,12 @@ class RT(nn.Module):
         self.sig = nn.Sigmoid()
 
     def forward(self, x):
+        x = torch.nn.functional.one_hot(x, 88).float()
+
         x = self.encoder(x)
         output = self.rt(x)
         output = self.linear(output).double()
-        return self.sig(output)
+        output = self.sig(output)
+
+        output = torch.argmax(output, dim=2, keepdim=False).float()
+        return output.squeeze(0)

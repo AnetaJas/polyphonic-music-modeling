@@ -41,7 +41,7 @@ def main(configs: omegaconf.DictConfig) -> None:
         "R-Transfomfer": RT(
             input_size=88,
             d_model=configs.training.model.d_model,
-            output_size=configs.training.model.embedding_dim,
+            output_size=88,
             h=configs.training.model.h,
             rnn_type=configs.training.model.rnn_type,
             ksize=configs.training.model.ksize,

@@ -1,5 +1,3 @@
-# plik z repozytorium: https://github.com/DSE-MSU/R-transformer/blob/master/models/RTransformer.py
-
 import copy
 import math
 import time
