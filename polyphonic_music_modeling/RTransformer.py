@@ -67,7 +67,7 @@ def attention(query, key, value, mask=None, dropout=None):
     d_k = query.size(-1)
     # scores: batch_size, n_head, seq_len, seq_len
     scores = torch.matmul(query, key.transpose(-2, -1)) / math.sqrt(d_k)
-
+    mask = mask.cpu()
     if mask is not None:
         scores = scores.masked_fill(mask == 0, -1e9)
 
@@ -90,7 +90,7 @@ class MHPooling(nn.Module):
         self.dropout = nn.Dropout(p=dropout)
 
         # auto-regressive
-        attn_shape = (1, 3000, 3000)
+        attn_shape = (1, 10000, 10000)
         subsequent_mask = np.triu(np.ones(attn_shape), k=1).astype("uint8")
         self.mask = (torch.from_numpy(subsequent_mask) == 0).unsqueeze(1).cuda()
 
@@ -148,11 +148,13 @@ class LocalRNN(nn.Module):
         nbatches, lv, input_dim = x.shape
         x = self.get_K(x)  # b x seq_len x ksize x d_model
         batch, lv, ksize, d_model = x.shape
+        x = x.cpu()
         h = self.rnn(x.view(-1, self.ksize, d_model))[0][:, -1, :]
         return h.view(batch, lv, d_model)
 
     def get_K(self, x):
         batch_size, lv, d_model = x.shape
+        x = x.cuda()
         zeros = self.zeros.unsqueeze(0).repeat(batch_size, 1, 1)
         x = torch.cat((zeros, x), dim=1)
         key = torch.index_select(x, 1, self.select_index[: self.ksize * lv])
