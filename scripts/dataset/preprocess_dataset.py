@@ -44,7 +44,6 @@ def preprocess_dataset(path: Path) -> None:
                         preprocessed_file.write(line)
                 else:
                     preprocessed_file.write(line)
-            preprocessed_file = open(path / "preprocessed" / file.name, "w")
             raw_file.close()
             preprocessed_file.close()
 
