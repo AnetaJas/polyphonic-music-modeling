@@ -1,10 +1,11 @@
-import typing as t
 import os
+import typing as t
 
 import pytorch_lightning as pl
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
 from scripts.dataset.dataset_loading import MusicDataset
 
 
@@ -22,7 +23,6 @@ class DataModule(pl.LightningDataModule):
         self.dataset_root = dataset_root
 
     def setup(self, stage: t.Optional[str] = None) -> None:
-
 
         self.train_dataset = MusicDataset(
             dataset_root=os.path.join(self.dataset_root, "train")
@@ -76,7 +76,7 @@ class ModelModule(pl.LightningModule):
         self.save_hyperparameters()
 
         self.learning_rate = lr
-        self.criterion = nn.NLLLoss()  
+        self.criterion = nn.NLLLoss()
         self.neural_net = model
 
     def configure_optimizers(self) -> torch.optim.Optimizer:
@@ -86,10 +86,9 @@ class ModelModule(pl.LightningModule):
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
     ) -> pl.utilities.types.STEP_OUTPUT:
         return self._step(batch=batch)
-    
+
     def training_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
-        self._summarize_epoch(
-            log_prefix="train", outputs=outputs)
+        self._summarize_epoch(log_prefix="train", outputs=outputs)
 
     def validation_step(
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
@@ -97,14 +96,12 @@ class ModelModule(pl.LightningModule):
         return self._step(batch=batch)
 
     def validation_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
-        self._summarize_epoch(
-            log_prefix="val", outputs=outputs)
+        self._summarize_epoch(log_prefix="val", outputs=outputs)
         pass
 
     def test_epoch_end(self, outputs: pl.utilities.types.EPOCH_OUTPUT) -> None:
-        self._summarize_epoch(
-            log_prefix="test", outputs=outputs)
-    
+        self._summarize_epoch(log_prefix="test", outputs=outputs)
+
     def test_step(
         self, batch: t.Tuple[torch.Tensor, torch.Tensor], batch_idx: int
     ) -> pl.utilities.types.STEP_OUTPUT:
@@ -117,7 +114,9 @@ class ModelModule(pl.LightningModule):
         y_pred = self.neural_net(x)
         loss = self.criterion(y_pred, y[:][0])
         return {"loss": loss}
-    
-    def _summarize_epoch(self, log_prefix: str, outputs: pl.utilities.types.EPOCH_OUTPUT):
+
+    def _summarize_epoch(
+        self, log_prefix: str, outputs: pl.utilities.types.EPOCH_OUTPUT
+    ):
         mean_loss = torch.tensor([out["loss"] for out in outputs]).mean()
         self.log(f"{log_prefix}_loss", mean_loss, on_epoch=True)
