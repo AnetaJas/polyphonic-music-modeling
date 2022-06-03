@@ -1,0 +1,86 @@
+
+X: 3
+T:Black Boy
+% Nottingham Music Database
+S:Mick Peat
+M:2/4
+L:1/4
+K:A
+|:"A"A "E"c/4B/4A/4G/4|"A"A/2c/2 e/2a/2|"E"g/2b/2 e/2d/2|"A"c/2AB/2|\
+"A"c/2e/2 "B"^d/2f/2|"E"e/2ge/2|"B"f/2a/2 g/4f/4e/4^d/4|"E"e E:|
+|:"A"e/2=gf/2|"D"f/4e/4d/4c/4 d|"E"B/2df/2|"A"e/4d/4c/4B/4 c|"F#m"A/2ce/2|\
+"Bm"d/4c/4B/4A/4 "E"G/2B/2|"Bm"E/2d/2 "E"c/4B/4A/4G/4|"A"A2:|
+M:6/8
+K:D
+|:"D"dd/2 cd/2|"A"e/2f/2e/2 e/2f/2g/2|"D"dd/2 "E"cd/2|"A"e/2c/2A/2 AA/2|
+"D"dd/2 cd/2|"A"e/2f/2d/2 e/2f/2g/2|"D"a/2f/2d/2 "A"g/2e/2c/2|[1 "D"dd/2 d A/2:|[2 "D"dd/2 de/2||
+|:"D"ff/2 f/2d/2f/2|"Em"gg/2 g/2e/2g/2|"D"ff/2 f/2d/2f/2|"A"e/2c/2A/2 Ag/2|
+"D"f/2a/2f/2 "Bm"d/2e/2f/2|"Em"g/2b/2g/2 "A"e/2f/2g/2|\
+"D"a/2f/2d/2 "A"g/2e/2c/2|[1 "D"dd/2 d e/2:|[2"D" dd/2 d3/2||
+
+
+X: 13
+T:The Dance of the Polygon
+% Nottingham Music Database
+S:Mick Peat
+M:4/4
+L:1/4
+K:D
+"D"D/2d/4c/4d/2d/2 f/2d/2f|"D"a/2f/2a/4g/4f/4e/4 "A"d/4c/4d/4e/4"D"d/2d/2|\
+"D"D/2d/4c/4d/2d/2 f/2d/2f|
+"A"a/2g/2f/2e/2 "D"dd|"A"g/2g/2"D"f/2f/2 "A"g/2g/2"D"f|\
+"D"D/2d/4c/4d/2d/2 f/2d/2f|"D"a/2f/2"A"a/4g/4f/4e/4 "D"d"A"f|
+"D"a/2f/2"A"a/4g/4f/4e/4 "D" d "D7" D|"G"G3/4A/4B/2B/2 B/2d/2d|\
+"G"B/2d/2"C"e/4d/4c/4B/4 "Am"A/4G/4A/4B/4"D"A/2A/2|
+"G"G3/4A/4B/2B/2 B/2d/2d|"G"d/2B/2"C"e/4d/4c/4B/4 "A7"B"D"A|\
+"Am"A3/4B/4"D"c/2c/2 "G"B/2d/2g/2B/2|
+"Am"A3/4B/4"D"c/2c/2 "G"B/2d/4e/4"D"d/4c/4B/4A/4|"G"G3/4A/4B/2B/2 B/2d/2g/2B/2\
+|"D"d/2A/2d/4c/4B/4A/4 "G"G2:|
+
+
+X: 17
+T:Falling About
+% Nottingham Music Database
+S:Mick Peat
+M:4/4
+L:1/4
+K:E
+"E"eE (3G/2F/2E/2B/2G/2|c/2B/2G/2B/2 c/2B/2c/2d/2|c/2B/2G/2B/2 c/2B/2c/2d/2|\
+"D"=d/2B/2A/2F/2 A/2B/2d/2^d/2|
+c/2B/2G/2B/2 c/2B/2c/2d/2|c/2B/2G/2B/2 c/2B/2c/2d/2|\
+e/2A/2(3c/2B/2A/2 f/2B/2(3d/2c/2B/2|e/2E/2(3G/2F/2E/2 e2:|
+K:A
+"A"e2 e/2A/2(3c/2B/2A/2|e/2c/2f/2d/2 =G/2e/2(3f/2e/2d/2|\
+K:A
+"A"e2 e/2A/2(3c/2B/2A/2|"G"d/2=G/2d/2B/2 e/2c/2(3f/2e/2d/2|
+"A"e2 e/2A/2(3c/2B/2A/2|e/2c/2f/2d/2 =G/2e/2(3f/2e/2d/2|\
+"A"e/2A/2(3c/2B/2A/2 "G"d/2=G/2(3B/2A/2G/2|"A"a/2A/2(3c/2B/2A/2 a2:|
+
+
+X: 29
+T:Paddy in Flow
+% Nottingham Music Database
+S:Mick Peat
+N:/f2AABA last time through/fP
+M:6/8
+K:D
+A|:"D"DED FAB|=cBA -AdA|"D"DED FAB|"C"=cAG -G2A|"D"DED FAB|
+=cBA Ade|fgf ed=c|[1"A"Adc "D"dAF:|[2"A"Adc "D"def||
+K:A
+|:"A"=gfe -efe|eag aec|Ace =gfe-|"E"eag bge|
+"A"=gfe -efe|eag aec|Ace =gfe|[1"E"eag "A"aef:|[2"E"eag "A"a3||
+
+
+X: 42
+T:The Trouper
+% Nottingham Music Database
+S:Mick Peat
+M:4/4
+L:1/4
+K:G
+B,C ^C|:"G"DB B^A/2B/2|BG D^D|"A"EB B^A/2B/2|B2 E=F|"D"FB BA/2B/2|
+BA2^A|"G"BG "Am"E_E|"D"DB, C^C|"G"DB B^A/2B/2|BG D^D|"A"EB B^A/2B/2|
+BG E=F|"D"FB BA/2B/2|dA2B|"G"G4|Gd B_B|"Am"AA _AG|"D"Fe dc|
+"G"Bf fe/2f/2|fd B_B|"Am"A3/2A/2 _AG|"D"Fe dc|"G"B4|"E"Bd B_B|"Am"AA _AG|
+"D"Fe dc|"G"Bf fe/2f/2|"E"f2 d2|"Am"Ge cA|"D"A/2^A/2B/2dB/2A|"G"G4|"G"Gzzz:|
+

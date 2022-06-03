@@ -1,0 +1,80 @@
+
+X: 1
+T:Alnwick Castle
+% Nottingham Music Database
+S:Kevin Briggs
+M:3/4
+L:1/4
+K:G
+D|"G"G3/2B/2"D7"A/2F/2|"G"GAB|"C"cde|"D7"d3/2c/2B/2A/2|"G"G3/2B/2"D7"A/2F/2|\
+"Em"GBd|"Am"c2B|
+"D7"A2D|"G"G2"D7"F|"G"GAB|"C"cde|"D"d2(3d/2e/2f/2|"C""Em"g3/2f/2e|"G""Bm"dBd|\
+"D7"cBA|
+"G"G2D|"D"F3/2E/2F/2G/2|"D7"AFD|"G"G2"D7"A|"G"B2B|"D"A3/2G/2A/2B/2|"D7"cBA|\
+"G"B2"D7"c|"G"d2g|
+"G"d2g|"G"dcB|"C"cde|"D"A2(3d/2e/2f/2|"C""Em"g3/2f/2e|"G""Bm"dBd|\
+"D7"cBA|"G"G2:|
+
+
+X: 5
+T:Blaenwern
+% Nottingham Music Database
+S:MHB 267 (i)
+M:3/4
+L:1/4
+K:G
+"G"D2D|"C/g"E2E|"G"DGB|"G/d"B2"D"A||"Em"G2"G/b"F|"C"E2"G"D|"D/a"DF"A"E|"D"D3||
+"G"D2D|"C"E2E|"G"DGB|"G/d"B2"D"A||"Em"G2A|"G"B"C"c"C"A|"G/d"G2"D"F|"G"G3||
+"G"B2"D/f+"B|"Em"BG"Em/d"B|"C"c"G/d"B"D"A|"G"B2B||"G/b"d2"D/a"d|"G"dB"D/f+"d|\
+"Em"e"D/a"d"A"^c|"D"d3||
+"C"e2"Am"c|"G/b"d2"G"B|"D/f+"dc"G"B|"G/d"B2"D"A||"G/b"G2"D/a"A|"G"B"C/e"c"C"A|\
+"G/d"G2"D"F|"G"G3||
+
+
+X: 6
+T:Blodau'r Drain
+% Nottingham Music Database
+Y:AAB
+S:TDA II
+M:3/4
+L:1/4
+K:Am
+P:A
+|:E|"Am"A2B|"Am/c"cBA|"Dm"ed/2c/2B/2A/2|"E7"B2E|"Am"AA/2c/2"Dm/a"B/2d/2|"Am"cBA|\
+"E7"^GG/2B/2"Am/e"A/2c/2|"E7"B2:|
+P:B
+B|"Am"c2c|"G/b"d2d|"C"ee"F/c"f|"C"e2"G/b"d|"Am"c/2B/2c/2d/2c|\
+"G7/b"d/2c/2d/2e/2d|
+"C"e/2f/2e/2f/2e/2f/2|"G7"g3/2f/2e/2d/2|"C"c/2B/2c/2d/2e/2c/2|\
+"G"d/2c/2d/2e/2f/2d/2|
+"Am"eea|"E7"^gg/2a/2b/2g/2|"Am"aec|"Dm"fed|"E7"cd/2c/2B/2c/2|"Am"A2||
+
+
+X: 30
+T:Mist on the Marsh
+% Nottingham Music Database
+S:Bryon Bonnett
+M:3/4
+L:1/4
+K:G
+D|"G"BB/2d/2c/2B/2|"D"AA2|"Em"GG/2B/2A/2G/2|"B7"F3|"C"EE/2G/2F/2E/2|"G"DG2|\
+"A"GG/2B/2A/2G/2|"D"A2"Da"^A|
+"G"BB/2d/2c/2B/2|"D"AA2|"Em"GG/2B/2A/2G/2|"B7"F3|"C"EE/2G/2F/2E/2|\
+"G"D/2G/2B/2d/2c/2B/2|"D7"B2A|"G"G2"G7"G||
+"C"ee/2d/2c/2e/2|"G"dB3/2B/2|"Am"cc/2e/2d/2c/2|"G"B2G|"C"ee/2d/2c/2e/2|\
+"G"dB3/2B/2|"A7"A/2^c/2e/2g/2f/2e/2|
+"D7"d^c=c|"G"BB/2d/2c/2B/2|"D"AA2|"Em"GG/2B/2A/2G/2|"B7"F3|
+"C"EE/2G/2F/2E/2|D/2G/2B/2c/2d|[1"D7"B2A|"G"G2:||[2"D7"B_BA|"G"G2||
+
+
+X: 49
+T:Waters of Tyne
+% Nottingham Music Database
+S:NPTB
+M:3/4
+L:1/4
+K:D
+F/2G/2|"D"AFF|"A"AFE|"G"DD3/2D/2|"D"D2E/2F/2|"G"GGF|"A"EFA|"G"BB3/2B/2|
+"A"A2F/2E/2|"D"Dd3/2d/2|"D"def|"D"dA3/2B/2|"G"B2c/2d/2|"D"AFA|"A"A2F/2E/2|\
+"G"DD3/2D/2|"D"D2:|
+

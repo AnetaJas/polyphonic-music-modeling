@@ -1,0 +1,56 @@
+
+X: 2
+T:Wiltshire Tempest
+% Nottingham Music Database
+S:Kevin Briggs, via EF
+M:4/4
+K:D
+M:4/4
+L:1/4
+A|"D"dA A/2B/2A|"D"fd d/2e/2d|"A7"eA Bc|"D"d/2c/2d/2e/2 "A7"fa|\
+"D"dA "A/c+"A/2B/2A|
+"Bm"fd d/2e/2d|"Em/g"eA "A7"Bc|"D"d2 "A7"df/2g/2|"D"af fd|\
+"G"e/2d/2c/2B/2 "A7"Af/2g/2|
+"D"af fd|"E7"e/2d/2c/2B/2 "A7"A/2B/2c/2A/2|"D"dA "A/c+"A/2B/2A|\
+"Bm"fd d/2e/2d|"Em/g"eA "A7"Bc|
+"D"d2 "A7"dA|"D"df af|"G"bg "D"a3/2f/2|"Em/g"gf "E7/g+"ed|\
+"A7"c/2d/2e/2c/2 AB/2c/2|"D"df af|
+"G"bg "D"a3/2f/2|"A7"ge cA|"D"d2 de/2f/2|"A7"ge cA|"D"df a3/2f/2|"A7"ge cA|
+"D"d/2e/2f/2g/2 "A7"a3/2f/2|"D"df af|"G"bg "D"a3/2f/2|"A7"ge cA|"D"d2 d||
+
+
+X: 19
+T:Whinshields
+% Nottingham Music Database
+S:NPTB, via EF
+M:4/4
+L:1/4
+K:G
+d/2c/2|"G"BG GB|"D7"AD D(3D/2E/2F/2|"G"GG "D7"G/2A/2B/2c/2|"G"dB "G7"dg|\
+"C"ec ce|
+"G"dG GA/2B/2|"Am"cB "A7"AG|"D7"FA d/2e/2d/2c/2|"G"BG GB|"D7"AD D(3D/2E/2F/2|
+"G"GG "D7"G/2A/2B/2c/2|"G"dB "G7"dg|"C"ec ce|"G"dG GA/2B/2|\
+"Am"c/2B/2A/2G/2 "D7"Fd|"G"G2 "D7"Gd|
+"G"g3/2a/2 "D7"g/2f/2e/2d/2|"G"BG GA/2B/2|"C"c/2B/2c/2d/2 c/2B/2A/2G/2|\
+"Am"FA "D7"df|"G"g3/2a/2 "D7"g/2f/2e/2d/2|
+"G"BG GB|"A7"AA B^c|"D7"d-d ef|"G"g3/2a/2 "D7"g/2f/2e/2d/2|\
+"G"BG GA/2B/2|
+"C"c/2B/2c/2d/2 c/2B/2A/2G/2|"D7"FA d/2e/2d/2c/2|"G"BG GB|"D"AD DB|\
+"Am"c/2B/2A/2G/2 "D7"Fd|"G"G3||
+
+
+X: 31
+T:Workshop Reel
+% Nottingham Music Database
+S:Hugh Barwell, via PR
+M:4/4
+L:1/4
+K:D
+de |:"D"f3/2d/2 Ad|"G"BG2B|"E7"e3/2d/2 cB|"A"A3^A|"G"B2 dB|"D"AF2d|\
+ [1"E7"e3/2d/2 cB|"A7"A2 de:|
+ [2"A7"czez|"D"dz"E7"cd|||:"A"ee "Ed"e/2d/2c|"Bm"df "G#7"f/2e/2^d|\
+"C#m"e2 c2|
+"F#7"^A3c|"Bm"d2 "E7"e3/2d/2|"A"c2 d3/2c/2| [1"B7"B3/2A/2 ^GA|"E7"B3c/2d/2:|
+ [2"E7"B3/2A/2 B^G|"A"A3"A7"f/2g/2|||:"D"a3/2f/2 da|"A7"ge2g|"Bm"f3/2e/2 df|
+"F#m"ec2c|"G"B2 b2|"D"a3/2f/2 df| [1"A"ea "E7"^gb|"A"a3"A7"f/2g/2:|[2"A7"eg fe|"D"d2 ||
+

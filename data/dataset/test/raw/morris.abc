@@ -1,0 +1,41 @@
+
+X: 3
+T:Beaux of London City
+% Nottingham Music Database
+S:Adderbury [News] ch(AB3) 6
+Y:ABCBCBCBCBCBC
+M:9/8
+K:F
+P:A
+C|
+P:B
+|:F3/2F/2F AGF A/2c3/2C|F2F A2G F2C|F3/2F/2F AGF A/2c3/2C|F3/2C/2F A2G F2C:|
+P:C
+c2B AGF Ac2|G2G G2A B3|c2B AGF A/2c3/2C|F3/2C/2F A2G F2C:|
+
+
+X: 18
+T:Morris Off
+% Nottingham Music Database
+S:Rattlebones
+M:4/4
+L:1/4
+K:G
+d|"G"g/2f/2g/2e/2 dg|"Am"a/2g/2f/2e/2 "D"d2|"C"c'a "G"bg|"D"a/2g/2f/2e/2 d2|
+"Em"g/2f/2g/2e/2 dg|"C"a/2g/2f/2e/2 "D"d2|"C"c'/2b/2a/2g/2 "D7"f/2d/2e/2f/2|\
+"G"gb g:|
+
+
+X: 28
+T:Sweet Jenny Jones
+% Nottingham Music Database
+S:Adderbury
+M:3/4
+L:1/4
+Y:ABA
+K:C
+P:A
+A/2B/2|cGE|C3/2D/2E|FAd|BGB|cGE|F3/2G/2A|GcB|c2:|
+P:B
+c/2d/2|ece|dBG|cAc|BGc/2d/2|ece|dBG|cBA|G2||
+

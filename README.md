@@ -65,7 +65,7 @@ pre-commit install
 
 ## Running scripts
 
-In order to run scripts you have to activate your virutal envrionment. 
+In order to run scripts you have to activate your virtual envrionment. 
 
 ``` bash
 source venv/bin/activate
@@ -92,21 +92,21 @@ After setting up config file you can run training like:
 ```bash
 python scripts/training/train.py
 ```
-If you have saved checkpoint file, and you only wanto run tests:
+If you have saved checkpoint file, and you only want to run tests:
 ```bash
 python scripts/training/test.py
 ```
 ## R-Transfomer
 R-Transfomer model is taken from: [R-Trasnformer](https://github.com/DSE-MSU/R-transformer)
 ### References
-
+```
 @article{wang2019rtransf,
   title={R-Transformer: Recurrent Neural Network Enhanced Transformer},
   author={Wang, Zhiwei and Ma, Yao and Liu, Zitao and Tang, Jiliang},
   journal={arXiv preprint arXiv:1907.05572},
   year={2019}
 }
-
+```
 ## GRU 
 GRU model consists of embedding layer, [gru layers](https://pytorch.org/docs/stable/generated/torch.nn.GRU.html) and linear layer.
 

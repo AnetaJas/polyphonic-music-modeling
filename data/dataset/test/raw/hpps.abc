@@ -1,0 +1,106 @@
+
+X: 6
+T:Beaux of Oakhill
+% Nottingham Music Database
+S:Kevin Briggs
+M:4/4
+L:1/8
+R:Hornpipe
+K:D
+P:A
+dB|"D"BAFA DAFA|"G"BA(3Bcd "A7"e2de|"D"fgaf "A7/e"egfe|"D/f+"dfed "G"B2dB|
+"D"BAFA DAFA|"G"BA(3Bcd "A"e2de|"Bm"faaf "A7/c+"egfe|"D"d2f2 d2:|
+P:B
+fg|"D"afdf a2gf|"Em"efga "A7"b2ag|"D"fgaf "A7/e"egfe|"D/f+"dfed "G"B2dB|
+"D"BAFA DAFA|"G"BA(3Bcd "A"e2de|"Bm"faaf "A7/c+"egfe|"D"d2f2 d2:|
+
+
+X: 7
+T:Caber Feigh
+% Nottingham Music Database
+S:Kevin Briggs
+M:4/4
+L:1/8
+R:Hornpipe
+K:C
+G2|:"C"c2ed c2GB|"C"c2GF E/2C3/2C2|"Dm"defe d2A^c|"Dm"d2AG F/2D3/2D2|
+"C"c2ed c2GB|"C"c2GF E/2C3/2CE|"Dm"DEFG ABcA|"Dm"d2AG F/2D3/2D2|
+"C"ecgc acgc|"C"ecgc e/2c3/2cd|"Dm"fdad bdad|"Dm"fgag f/2d3/2d2|
+"C"ecgc acgc|"C"GAcd e/2c3/2cg|"F"af"C"ge "G"fd"A"e^c|"Dm"d2AG F/2D3/2D2:||
+
+
+X: 31
+T:Kitty O'Niel's Champion
+% Nottingham Music Database
+S:Chicago
+M:4/4
+L:1/8
+R:Hornpipe
+K:A
+AB|"A"c2^B2 c2B2|"A"c^Bcf ecAc|"Bm"B2^A2 B2A2|"Bm"Bagf "E7"edcB|
+"A"c2^B2 c2B2|"A"c^Bcf ecAc|"Bm"B2^A2 B2=a2|"E7"(3gfe(3dcB "A"A4|
+"A"c2a2 c2Bc|"Bm"d2b2 B2Bc|"D"defg agaf|"E7"(3efe(3dcB "A"c2A2|
+"A"c2a2 c2Bc|"Bm"d2b2 B2Bc|"D"defg agaf|"E7"(3efe(3dcB "A"A2:|
+
+
+X: 34
+T:Londonderry Hornpipe
+% Nottingham Music Database
+S:Variations by O'Neill
+M:4/4
+L:1/8
+R:Hornpipe
+K:D
+P:A
+AG|"D"F2Ad fdAF|"G"G2Bd gdBG|"D"F2Ad fdAF|"Em"E2GB "A7"(3edcAG|
+"D"F2Ad fdAF|"G"G2Bd g2ag|"D"fafd "A7"Bgec|"D"d2f2 d2:|
+P:B
+fg|"D"a2fd Adfa|"Em"g2ec "A7"Aceg|"D"a2fd Adgf|"G"(3efd"E7"(3cdB "A7"A2fg|
+"D"a2fd Adfa|"Em"gece "A7"g2ag|"D"fafd "A7"Bgec|"D"d2f2 d2:|
+P:C
+AG|"D"(3FEDAD BDAD|"D"dcdf "A7"ecAG|
+"D"(3FEDAD BDAD|"G"EGFA "A7"GBAG|"D"(3FEDAD BDAD|
+"D"dcdf "A7"edeg|"D"(3fafdf "A7"gece|"D"df(3edc d2:|
+P:D
+(3fg^g|"D"a^gab afdf|"Em"gfga "A7"gece|"D"a^gab afdf|
+"G"(3efd"E7"(3cdB "A7"A2(3fg^g|"D"a^gab afdf|"G"gfef "A7"gbag|
+"D"dcdf "A7"edeg|"D"(3fafdf "A7"gece:|
+P:E
+fg|"D"(3aaafd Adfd|"Em"(3gggec "A7"Acec|"D"fdge afbg|"A"ec"E7"dB "A7"A2fg|
+"D"(3aaafd Adfd|"Em"(3gggec "A7"A2ag|"D"fdAF "A7"Egec|"D"d2f2 d2:|
+P:F
+FG|"D"AFAd fedc|"G"BGBe "Em"gfed|"A7"cAce agfe|"D"fcdB "A7"A2FG|
+"D"AFAd fedc|"G"BGBe "Em"g2ag|"D"fafd "A7"Bgec|"D"d2f2 d2:|
+
+
+X: 47
+T:Navvie on the Line
+% Nottingham Music Database
+S:Kevin Briggs
+M:4/4
+L:1/8
+R:Hornpipe
+K:G
+P:A
+Bc|"G"dgfe dcBA|"G"GBDG B2(3BAG|"D7"FADF A2(3AGF|"G"GBDG "D7"B2Bc|
+"G"dgfe (3ded(3cBA|"G"GBDG B2AG|"D7"FGAB cdef|"G"g2G2 G2:|
+P:B
+AG|"D7"FADF A2(3AGF|"G"GBDG B2(3BAG|"D7"FADF A2(3AGF|"G"GDEF "D7"GABc|
+"G"dgfe (3ded(3cBA|"G"GBDG B2AG|"D7"FGAB cdef|"G"g2G2 G2:|
+
+
+X: 48
+T:City of Savannah
+% Nottingham Music Database
+S:Trad via Lesley Dolman
+M:4/4
+L:1/8
+R:Hornpipe
+K:D
+P:A
+FG|"D"(3ABAFA dfaf|"G"gaba gfed|"Em"cded cdBc|"A7"ABGA FFG^G|
+"D"(3ABAFA dfaf|"G"gaba gfed|"A7"cbag fABc|"D"d2f2 d2:|
+P:B
+e2|"A"(3efece aec'e|"E7"be^ge "A"aebe|"A"(3efece aec'e|"E7"be^ge "A"a4|
+"A7"(3abaga eac2|"D"(3abafa daA2|"G"(3gagGg "D"(3fgfAf|"A7"eABc "D"d2:|
+
