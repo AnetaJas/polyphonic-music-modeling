@@ -1,3 +1,14 @@
+'''
+source: https://github.com/DSE-MSU/R-transformer
+authors:Wang, Zhiwei and Ma, Yao and Liu, Zitao and Tang, Jiliang
+
+@article{wang2019rtransf,
+  title={R-Transformer: Recurrent Neural Network Enhanced Transformer},
+  author={Wang, Zhiwei and Ma, Yao and Liu, Zitao and Tang, Jiliang},
+  journal={arXiv preprint arXiv:1907.05572},
+  year={2019}
+}
+'''
 import copy
 import math
 import time

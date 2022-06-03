@@ -19,7 +19,7 @@ def main(configs: omegaconf.DictConfig) -> None:
     logger.info("Creating dataset")
 
     dataset_module = lm.DataModule(
-        batch_size=configs.dataset_module.batch_size,
+        batch_size=1,
         num_workers=configs.dataset_module.num_workers,
         dataset_root=configs.dataset_module.dataset_root,
     )

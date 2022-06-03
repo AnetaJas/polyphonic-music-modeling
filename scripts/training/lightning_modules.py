@@ -112,7 +112,7 @@ class ModelModule(pl.LightningModule):
     ) -> pl.utilities.types.STEP_OUTPUT:
         x, y = batch
         y_pred = self.neural_net(x)
-        loss = self.criterion(y_pred, y[:][0])
+        loss = self.criterion(y_pred, y[:][0]) # to fit dimension of batch data
         return {"loss": loss}
 
     def _summarize_epoch(

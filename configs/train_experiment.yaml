@@ -4,11 +4,8 @@ hydra:
   output_subdir: 'yamls'
 
 dataset_module:
-  batch_size: 1
   num_workers: 4
-  #dataset_root: "/home/arybs/ZZSN/polyphonic-music-modeling/data/dataset"
-  #dataset_root: "/home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling/data/dataset"
-  dataset_root: "/content/drive/MyDrive/polyphonic-music-modeling/data/dataset"
+  dataset_root: "/path/to/dataset"
 
 nn_module:
   lr: 0.0001
@@ -17,15 +14,15 @@ training:
   max_epochs: 50
   wandb_project: "MusicModelling"
   with_gpu: false
-  wandb_name: "TrainLSTM"
+  wandb_name: "TrainNeuralNetwork"
   early_stop:
     monitor: "val_loss"
     patience: 5
     mode: "min"
-  model_name: "R-Transfomfer"
+  model_name: "Neural Network: LSTM/GRU/R-Transformer"
   model:
     layers: 3
-    embedding_dim: 100
+    embedding_dim: 88
     hidden_dim: 100
     d_model: 160
     h: 2
@@ -34,11 +31,8 @@ training:
     n_level: 3
     n: 1
     dropout: 0.1
-    #emb_dropout: 0.05
 
 
 
 test:
-  #path: /home/arybs/ZZSN/polyphonic-music-modeling/train_experiment/2022-05-23/01-06/lightning_logs/version_0/checkpoints/ # do udoskonalenia
-  #path: /home/aneta/Desktop/ZZSN/code/polyphonic-music-modeling/train_experiment/2022-05-23/01-06/lightning_logs/version_0/checkpoints/
-  path: "/content/drive/MyDrive/polyphonic-music-modeling/train_experiment/2022-05-23/01-06/lightning_logs/version_0/checkpoints/"
+  path: "/path/to/save/checkpoint"

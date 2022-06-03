@@ -8,7 +8,7 @@ import hydra
 import omegaconf
 import pytorch_lightning as pl
 
-# sys.path.append(os.getcwd())
+sys.path.append(os.getcwd())
 
 from loguru import logger
 from pytorch_lightning.loggers import WandbLogger
@@ -55,7 +55,7 @@ def main(configs: omegaconf.DictConfig) -> None:
     logger.info("Creating dataset")
 
     dataset_module = lm.DataModule(
-        batch_size=configs.dataset_module.batch_size,
+        batch_size=1,
         num_workers=configs.dataset_module.num_workers,
         dataset_root=configs.dataset_module.dataset_root,
     )
@@ -65,7 +65,7 @@ def main(configs: omegaconf.DictConfig) -> None:
         lr=configs.nn_module.lr,
         model=model_to_choose[
             configs.training.model_name
-        ],  # do korelacji ze zbiore danych
+        ], 
     )
 
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")

@@ -79,6 +79,9 @@ class GRU(nn.Module):
 
 
 class RT(nn.Module):
+    '''
+    model based on: https://github.com/DSE-MSU/R-transformer
+    '''
     def __init__(
         self,
         input_size,
